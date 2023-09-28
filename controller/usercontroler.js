@@ -26,7 +26,8 @@ exports.register = async (req,res)=>{
           transactions:[]
         })
         await newuser.save()
-        res.status(200).json(` ${newuser.username} registered succesfully`)
+        console.log('registered');
+        res.status(200).json('registered succesfully')
       }
     }catch(error){
       res.status(402).json(`error= ${error}`)
